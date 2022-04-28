@@ -1,0 +1,21 @@
+
+_
+java:S1192>"IDefine a constant instead of duplicating this literal "onionQty" 3 times.(îÜÚğ
+b
+java:S1192E"GDefine a constant instead of duplicating this literal "eggQty" 3 times.(Ìœğşşÿÿÿÿ
+f
+java:S1192!"KDefine a constant instead of duplicating this literal "welshOnion" 5 times.(×¬æ¯şÿÿÿÿ
+a
+java:S1192"FDefine a constant instead of duplicating this literal "onion" 5 times.(ÎÀÓ½øÿÿÿÿ
+i
+java:S1192K"NDefine a constant instead of duplicating this literal "welshOnionQty" 3 times.(Îë˜ùÿÿÿÿ
+a
+java:S1192%"FDefine a constant instead of duplicating this literal "apple" 5 times.(İø×úÿÿÿÿ
+d
+java:S1192Q"IDefine a constant instead of duplicating this literal "appleQty" 3 times.( Òˆ…ıÿÿÿÿ
+e
+java:S1192"JDefine a constant instead of duplicating this literal "foodStand" 3 times.(ÿş ´ûÿÿÿÿ
+?
+java:S1481:")Remove this unused "food" local variable.(ÅÄ‡«
+?
+java:S1481^")Remove this unused "food" local variable.(ÅÄ‡«

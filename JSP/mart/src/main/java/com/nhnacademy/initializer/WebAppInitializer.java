@@ -17,10 +17,24 @@ public class WebAppInitializer implements ServletContainerInitializer {
     @Override
     public void onStartup(Set<Class<?>> set, ServletContext servletContext)
         throws ServletException {
-        servletContext.setInitParameter("onion", "1000" );
-        servletContext.setInitParameter("egg", "2000");
-        servletContext.setInitParameter("welshOnion", "500");
-        servletContext.setInitParameter("apple", "200");
+        servletContext.setInitParameter("counterFileName", "counter.dat");
+        servletContext.setInitParameter("onion","onion");
+        servletContext.setInitParameter("egg","egg");
+        servletContext.setInitParameter("welshOnion","welshOnion");
+        servletContext.setInitParameter("appleName","apple");
+        servletContext.setAttribute("onionQty","2");
+        servletContext.setAttribute("eggQty","5");
+        servletContext.setAttribute("welshOnionQty","10");
+        servletContext.setAttribute("appleQty","20");
+        servletContext.setInitParameter("onionPrice","1000");
+        servletContext.setInitParameter("eggPrice","2000");
+        servletContext.setInitParameter("welshOnionPrice","500");
+        servletContext.setInitParameter("applePrice","2000");
+        servletContext.setInitParameter("counterFileName", "counter.dat");
+
+        servletContext.setAttribute("ko", "한국어");
+        servletContext.setAttribute("en","English");
+
     }
 }
 
