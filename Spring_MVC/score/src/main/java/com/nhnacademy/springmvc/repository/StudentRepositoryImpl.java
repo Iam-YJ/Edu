@@ -34,4 +34,10 @@ public class StudentRepositoryImpl implements StudentRepository {
     public Student getStudent(long id) {
         return exists(id)? students.get(id) : null;
     }
+
+    @Override
+    public Student modifyStudent(long id, Student student) {
+        students.put(id, student);
+        return student;
+    }
 }

@@ -1,6 +1,6 @@
 
 `
 java:S2259"EA "NullPointerException" could be thrown; "command" is nullable here.( ©‹Òýÿÿÿÿ
-]	java:S1250"<This block of commented-out lines of code should be removed.(™…Æàúÿÿÿÿ8À­Ýì†0
-P
-java:S1068"3Remove this unused "REDIRECT_PREFIX" private field.(þà“î8ÞÖì†0
+V	java:S1250"<This block of commented-out lines of code should be removed.(™…Æàúÿÿÿÿ
+I
+java:S1068"3Remove this unused "REDIRECT_PREFIX" private field.(þà“î

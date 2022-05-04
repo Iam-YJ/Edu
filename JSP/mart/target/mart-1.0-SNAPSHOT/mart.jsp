@@ -18,7 +18,7 @@
 
 money : <%= session.getAttribute("money") %> <br>
 
-language <br>
+<br>language <br>
 <a href="ko"><%= application.getAttribute("ko") %></a> <br>
 <a href="en"><%= application.getAttribute("en") %></a> <br>
 

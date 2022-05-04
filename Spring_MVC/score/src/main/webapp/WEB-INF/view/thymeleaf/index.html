@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+</head>
+<body>
+<h2>Hello World!</h2>
+<h2 th:text="#{greeting}"></h2> <br/>
+
+<a href="?locale=ko" th:with="isLocaleKo=${#locale.toString()=='ko'}">
+    <b th:if="${isLocaleKo}">Ko</b><span th:unless="${isLocaleKo}">Ko</span>
+</a><br/>
+<a href="?locale=en" th:with="isLocaleEn=${#locale.toString()=='en'}">
+    <b th:if="${isLocaleEn}">En</b><span th:unless="${isLocaleEn}">En</span>
+</a>
+
+
+</body>
+</html>
