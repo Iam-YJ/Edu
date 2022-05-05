@@ -19,8 +19,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTTP Request" />
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -63,9 +63,56 @@
       <command value="mvn clean com" />
     </option>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.62">
+  <component name="RunManager" selected="JUnit.MemberControllerTest.testGetMember">
     <configuration name="users | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/users.http" requestIdentifier="#1" runType="Run single request">
       <method v="2" />
+    </configuration>
+    <configuration name="HomeControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springmvc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.nhnacademy.springmvc.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.nhnacademy.springmvc.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.nhnacademy.springmvc.controller.HomeControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginControllerTest.getLoginWithoutCookie" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springmvc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.nhnacademy.springmvc.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.nhnacademy.springmvc.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.nhnacademy.springmvc.controller.LoginControllerTest" />
+      <option name="METHOD_NAME" value="getLoginWithoutCookie" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MemberControllerTest.testGetMember" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springmvc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.nhnacademy.springmvc.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.nhnacademy.springmvc.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.nhnacademy.springmvc.controller.MemberControllerTest" />
+      <option name="METHOD_NAME" value="testGetMember" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="Tomcat 9.0.62" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.62" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
@@ -156,6 +203,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MemberControllerTest.testGetMember" />
+        <item itemvalue="JUnit.LoginControllerTest.getLoginWithoutCookie" />
+        <item itemvalue="JUnit.HomeControllerTest" />
         <item itemvalue="HTTP Request.users | #1" />
       </list>
     </recent_temporary>
@@ -174,6 +224,8 @@
       <workItem from="1651561922013" duration="5486000" />
       <workItem from="1651577011076" duration="1124000" />
       <workItem from="1651589806906" duration="522000" />
+      <workItem from="1651624333209" duration="6382000" />
+      <workItem from="1651636878502" duration="5962000" />
     </task>
     <servers />
   </component>
@@ -190,5 +242,13 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/academy_spring_mvc$LoginControllerTest_getLoginWithoutCookie.ic" NAME="LoginControllerTest.getLoginWithoutCookie Coverage Results" MODIFIED="1651637735088" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.nhnacademy.springmvc.controller.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/academy_spring_mvc$MemberControllerTest_testGetMember.ic" NAME="MemberControllerTest.testGetMember Coverage Results" MODIFIED="1651642293291" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.nhnacademy.springmvc.controller.*</FILTER>
+    </SUITE>
   </component>
 </project>
