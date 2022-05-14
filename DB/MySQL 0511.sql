@@ -1,4 +1,4 @@
-use nhnacademy_12
+use nhn_academy_12;
 
 
 CREATE TABLE cust (
