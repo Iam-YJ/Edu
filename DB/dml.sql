@@ -19,7 +19,7 @@ insert into resident (resi_name, resi_registration_num, gender, tel_num) values(
 );
 
 insert into resident (resi_name, resi_registration_num, gender) values(
-	"이선미", "851205", "여"
+	"이선미", "8512059999999", "여"
 );
 
 insert into resident (resi_name, resi_registration_num, gender) values(
@@ -86,11 +86,50 @@ insert into death_info values(
 	1, '20210429090300', '주택', '강원도 고성군 금강산로 290번길'
 );
 
-select rel_name, resi_name, birth_datetime, resi_registration_num, gender
-	from resident R
-		inner join family_relationship F
-			on F.rel_target_resi_num = R.resi_num
-		inner join birth_info B
-			on B.resi_num = R.resi_num
-where rel_level <= 1
-order by birth_datetime;
+insert into certification_record values(
+	"1234567891011121", 4, '20211025'
+);
+
+insert into certification_record values(
+	"9876543210987654", 4, '20211025'
+);
+
+insert into report (reporter_num, report_distinct, report_qualification, report_date) values(
+	4, "출생", "부", "20120317"
+);
+
+insert into report (reporter_num, report_distinct, report_qualification, report_date) values(
+	2, "사망", "비동거친족", "20200502"
+);
+
+insert into transfer_address_record values(
+'20071031', 1, '서울시 동작구 상도로 940번길'
+);
+
+insert into transfer_address_record values(
+'20091031', 1, '경기도 성남시 분당구 불정로 90번길'
+);
+
+insert into transfer_address_record values(
+'20130305', 1, '경기도 성남시 분당구 대왕판교로 645번길'
+);
+
+insert into household values(
+	1
+);
+
+insert into household_composition values (
+	"본인", 1, 4, "세대분리", "20091002"
+);
+
+insert into household_composition values (
+	"배우자", 1, 5, "전입", "20100215"
+);
+
+insert into household_composition values (
+	"자녀", 1, 7, "출생등록", "20120317"
+);
+
+insert into household_composition values (
+	"동거인", 1, 6, "전입", "20151129"
+);

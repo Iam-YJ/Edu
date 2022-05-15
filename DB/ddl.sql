@@ -1,3 +1,5 @@
+use nhn_academy_12;
+
 drop table certification_record;
 drop table report;
 drop table family_relationship;
@@ -9,14 +11,14 @@ drop table household;
 drop table transfer_address_record;
 
 create table certification_record(
-	cer_num int not null,
+	cer_num varchar(16) not null,
     resi_num int not null,
     issue_date date not null,
     primary key(cer_num)
 );
 
 create table report(
-	report_num int not null,
+	report_num int auto_increment not null,
     reporter_num int not null,
     report_distinct varchar(20) not null,
     report_qualification varchar(20) not null,
@@ -59,12 +61,12 @@ create table death_info(
 );
 
 create table household_composition(
-	resi_num int not null,
-    household_num int not null,
     householder_rel_name varchar(10) not null,
+	household_num int not null,
+	resi_num int not null,
     change_reason varchar(10) not null,
     change_date date not null,
-    primary key(resi_num)
+    primary key(householder_rel_name, household_num)
 );
 
 create table household(
