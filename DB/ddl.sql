@@ -20,7 +20,7 @@ create table certification_record(
 create table report(
 	report_num int auto_increment not null,
     reporter_num int not null,
-    report_distinct varchar(20) not null,
+    report_class varchar(20) not null,
     report_qualification varchar(20) not null,
     report_date date not null,
     primary key(report_num)
@@ -38,7 +38,7 @@ create table resident(
 	resi_num int auto_increment not null,
     resi_name varchar(10) not null,
     resi_registration_num varchar(300) not null,
-    gender varchar(3) not null,
+    gender varchar(2) not null,
     tel_num varchar(20),
     email varchar(20),
     primary key(resi_num)
@@ -47,7 +47,7 @@ create table resident(
 create table birth_info(
 	resi_num int not null,
     birth_datetime datetime not null,
-    birth_place_distinct varchar(20) not null,
+    birth_place_class varchar(20) not null,
     permenant_addr varchar(100) not null,
     primary key(resi_num)
 );
@@ -55,7 +55,7 @@ create table birth_info(
 create table death_info(
 	resi_num int not null,
     birth_datetime datetime,
-    birth_place_distinct varchar(20),
+    birth_place_class varchar(20),
     permenant_addr varchar(100),
     primary key(resi_num)
 );
@@ -77,6 +77,7 @@ create table household(
 create table transfer_address_record(
 	addr_change_date date not null,
     household_num int not null,
-    change_addr varchar(100),
+    change_addr varchar(100) not null,
+    addr_class varchar(5) not null,
     primary key(addr_change_date, household_num)
 );

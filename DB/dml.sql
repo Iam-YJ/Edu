@@ -91,27 +91,27 @@ insert into certification_record values(
 );
 
 insert into certification_record values(
-	"9876543210987654", 4, '20211025'
+	"9876543210987654", 5, '20211025'
 );
 
-insert into report (reporter_num, report_distinct, report_qualification, report_date) values(
+insert into report (reporter_num, report_class, report_qualification, report_date) values(
 	4, "출생", "부", "20120317"
 );
 
-insert into report (reporter_num, report_distinct, report_qualification, report_date) values(
+insert into report (reporter_num, report_class, report_qualification, report_date) values(
 	2, "사망", "비동거친족", "20200502"
 );
 
 insert into transfer_address_record values(
-'20071031', 1, '서울시 동작구 상도로 940번길'
+'20071031', 1, '서울시 동작구 상도로 940번길', '전주소'
 );
 
 insert into transfer_address_record values(
-'20091031', 1, '경기도 성남시 분당구 불정로 90번길'
+'20091031', 1, '경기도 성남시 분당구 불정로 90번길', '전주소'
 );
 
 insert into transfer_address_record values(
-'20130305', 1, '경기도 성남시 분당구 대왕판교로 645번길'
+'20130305', 1, '경기도 성남시 분당구 대왕판교로 645번길', '현주소'
 );
 
 insert into household values(
