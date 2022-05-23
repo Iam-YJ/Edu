@@ -53,8 +53,8 @@
             float: right;
 
             padding: 20px;
-            width: 89%;
-            background-color: #f1f1f1;
+            width: 79%;
+            background-color: white;
             height: 300px; /* only for demonstration, should be removed */
         }
 
@@ -83,7 +83,7 @@
 
         /* Bordered form */
         form {
-            border: 3px solid #f1f1f1;
+            border: 3px solid white;
         }
 
         /* Full-width inputs */
@@ -153,8 +153,78 @@
                 width: 100%;
             }
         }
+
+        a {
+            text-decoration: none;
+            display: inline-block;
+            padding: 8px 16px;
+        }
+
+        a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .previous {
+            background-color: #f1f1f1;
+            color: black;
+        }
+
+        .next {
+            background-color: #04AA6D;
+            color: white;
+        }
+
+        .round {
+            border-radius: 50%;
+        }
+
+        .btn {
+            border: 2px solid black;
+            border-radius: 5px;
+            background-color: white;
+            color: black;
+            padding: 5px 10px;
+            font-size: 10px;
+            cursor: pointer;
+        }
+
+        /* Green */
+        .success {
+            border-color: #04AA6D;
+            color: green;
+        }
+
+        .success:hover {
+            background-color: #04AA6D;
+            color: white;
+        }
+
+
+        /* Orange */
+        .warning {
+            border-color: #ff9800;
+            color: orange;
+        }
+
+        .warning:hover {
+            background: #ff9800;
+            color: white;
+        }
+
+        /* Red */
+        .danger {
+            border-color: #f44336;
+            color: red
+        }
+
+        .danger:hover {
+            background: #f44336;
+            color: white;
+        }
+
     </style>
-    </style>
+
 </head>
 <body>
 <header>
@@ -166,7 +236,8 @@
         <ul>
             <h1>
                 <div class="logo">
-                    <a href="/"><img src="image/academy_top_logo-removebg-preview.png" alt="NHN Academy" title="NHN Academy"
+                    <a href="/"><img src="image/academy_top_logo-removebg-preview.png" alt="NHN Academy"
+                                     title="NHN Academy"
                                      style="max-width: 100%; height: auto;"></a>
                 </div>
             </h1>
@@ -177,14 +248,46 @@
     </nav>
 
     <article>
+        <button class="btn success" onclick="location.href='/boardWrite'">Write</button>
 
-        <div class="logo">
-            <a href="https://www.nhnacademy.com/"><img src="image/academy_top_logo-removebg-preview.png" alt="NHN Academy" title="NHN Academy"
-                                                       style="max-width: 100%; height: auto;"></a>
-        </div>
+        <table>
+            <thead>
+            <tr>
+                <th>번호</th>
+                <th>제목</th>
+                <th>작성자(수정자)</th>
+                <th>작성일시</th>
+                <th>댓글갯수</th>
+                <th>기타</th>
+            </tr>
+            </thead>
+            <tbody>
+
+            <tr th:each="boardContent : ${boardContentLists}">
+                <td th:text="${boardContent.contentSerialNumber}"/>
+                <td th:text="${boardContent.title}"/>
+                <td th:text="${boardContent.id}"><a href="/contextPost"></a></td>
+                <td th:text="${boardContent.writeTime}"/>
+                <td th:text="${boardContent.likeCount}"/>
+                <td>
+<!--                    <button class="btn warning" th:action="@{/boardModify/{num}(num=${boardContent.contentSerialNumber})}"> Modify </button>-->
+<!--                    <button class="btn danger" onclick="location.href='/boardDelete/num?serialNum='${boardContent.contentSerialNumber}">Delete</button>-->
+
+                    <a th:href="@{/boardModify/modify/{num}(num = ${boardContent.contentSerialNumber})}">Modify</a>
+                    <a th:href="@{/boardDelete/delete/{num}(num = ${boardContent.contentSerialNumber})}">Delete</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <a href="#" class="previous round">&#8249;</a>
+        <a href="#" class="next round">&#8250;</a>
     </article>
 </section>
 
+<!-- <footer>
+  <p>Footer</p>
+</footer> -->
 
 </body>
 </html>

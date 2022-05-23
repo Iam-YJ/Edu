@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.nhnacademy.jdbc.board.boardlist.mapper.BoardListMapper">
+    <select id="getBoardLists" resultType="com.nhnacademy.jdbc.board.boardlist.domain.BoardList">
+        SELECT *
+        FROM BoardList
+    </select>
+
+    <select id="getBoardList" resultType="com.nhnacademy.jdbc.board.boardlist.domain.BoardList">
+        SELECT *
+        FROM BoardList
+        WHERE contentSerialNumber = #{contentSerialNumber}
+    </select>
+</mapper>

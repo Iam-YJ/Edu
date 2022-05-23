@@ -51,10 +51,9 @@
 
         article {
             float: right;
-
-            padding: 20px;
-            width: 89%;
-            background-color: #f1f1f1;
+            padding-left: 0px;
+            width: 70%;
+            background-color: white;
             height: 300px; /* only for demonstration, should be removed */
         }
 
@@ -63,14 +62,6 @@
             content: "";
             display: table;
             clear: both;
-        }
-
-        /* Style the footer */
-        footer {
-            background-color: #777;
-            padding: auto;
-            text-align: center;
-            color: white;
         }
 
         /* 로그인 폼 css */
@@ -83,7 +74,7 @@
 
         /* Bordered form */
         form {
-            border: 3px solid #f1f1f1;
+            border: 3px solid white;
         }
 
         /* Full-width inputs */
@@ -162,14 +153,11 @@
 </header>
 
 <section>
+    </span>
+
+
     <nav>
         <ul>
-            <h1>
-                <div class="logo">
-                    <a href="/"><img src="image/academy_top_logo-removebg-preview.png" alt="NHN Academy" title="NHN Academy"
-                                     style="max-width: 100%; height: auto;"></a>
-                </div>
-            </h1>
             <li><a href="/login" style="color: white">Login</a></li>
             <li><a href="/boardList" style="color: white">BoardList</a></li>
             <li><a href="/boardWrite" style="color: white">Board</a></li>
@@ -177,11 +165,17 @@
     </nav>
 
     <article>
+        <span th:text="${session.user.getId()}"> userid </span> 님 환영합니다
+
+        <img th:src="${pageContext.request.contextPath}/image/academy_top_logo-removebg-preview.png.png"/>
 
         <div class="logo">
-            <a href="https://www.nhnacademy.com/"><img src="image/academy_top_logo-removebg-preview.png" alt="NHN Academy" title="NHN Academy"
-                                                       style="max-width: 100%; height: auto;"></a>
+            <a href="https://www.nhnacademy.com/"><img src="image/academy_top_logo-removebg-preview.png"
+                                                       title="NHN Academy"
+                                                       style="max-width: 100%; height: auto;"/></a>
         </div>
+
+
     </article>
 </section>
 

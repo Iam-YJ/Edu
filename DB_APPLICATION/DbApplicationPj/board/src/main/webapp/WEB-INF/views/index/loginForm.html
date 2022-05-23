@@ -1,0 +1,212 @@
+<html lang="en">
+<head>
+    <title>HsYj DB Application PJ</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
+        * {
+            box-sizing: border-box;
+            font-family: 'Jua', sans-serif;
+        }
+
+        body {
+            margin: 0px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Style the header */
+        header {
+            background-color: #F6DFEB;
+            padding: 1%;
+            text-align: center;
+            font-size: 35px;
+            color: rebeccapurple;
+            margin-bottom: 20px;
+        }
+
+        /* Create two columns/boxes that floats next to each other */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            z-index: 1000;
+            display: block;
+            padding: 0 20px;
+            overflow: hidden;
+            background-color: #F6DFEB;
+            width: 210px;
+            height: auto;
+            text-align: center;
+
+        }
+
+        /* Style the list inside the menu */
+        nav ul {
+            list-style-type: none;
+            padding: 0px;
+        }
+
+        article {
+            float: right;
+
+            padding: 20px;
+            width: 89%;
+            background-color: #f1f1f1;
+            height: 300px; /* only for demonstration, should be removed */
+        }
+
+        /* Clear floats after the columns */
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Style the footer */
+        footer {
+            background-color: #777;
+            padding: auto;
+            text-align: center;
+            color: white;
+        }
+
+        /* 로그인 폼 css */
+        @media (max-width: 600px) {
+            nav, article {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        /* Bordered form */
+        form {
+            border: 3px solid #f1f1f1;
+        }
+
+        /* Full-width inputs */
+        input[type=text], input[type=password] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        /* Set a style for all buttons */
+        button {
+            background-color: #04AA6D;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        /* Add a hover effect for buttons */
+        button:hover {
+            opacity: 0.8;
+        }
+
+        /* Extra style for the cancel button (red) */
+        .cancelbtn {
+            width: auto;
+            padding: 10px 18px;
+            background-color: #f44336;
+        }
+
+        /* Center the avatar image inside this container */
+        .imgcontainer {
+            text-align: center;
+            margin: 24px 0 12px 0;
+        }
+
+        /* Avatar image */
+        img.avatar {
+            width: auto;
+            border-radius: 50%;
+        }
+
+        /* Add padding to containers */
+        .container {
+            padding: 16px;
+        }
+
+        /* The "Forgot password" text */
+        span.psw {
+            float: right;
+            padding-top: 16px;
+        }
+
+        /* Change styles for span and cancel button on extra small screens */
+        @media screen and (max-width: 300px) {
+            span.psw {
+                display: block;
+                float: none;
+            }
+
+            .cancelbtn {
+                width: 100%;
+            }
+        }
+    </style>
+    </style>
+</head>
+<body>
+<header>
+    <h2>Board Main</h2>
+</header>
+
+<section>
+    <nav>
+        <ul>
+            <h1>
+                <div class="logo">
+                    <a href="/"><img src="image/academy_top_logo-removebg-preview.png" alt="NHN Academy" title="NHN Academy"
+                                     style="max-width: 100%; height: auto;"></a>
+                </div>
+            </h1>
+            <li><a href="/login" style="color: white">Login</a></li>
+            <li><a href="/boardList" style="color: white">BoardList</a></li>
+            <li><a href="/boardWrite" style="color: white">Board</a></li>
+        </ul>
+    </nav>
+
+    <article>th
+        <form action="/login" method="post">
+            <div class="imgcontainer">
+                <img src="data:image/jpeg;base64,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"
+                     alt="Avatar" class="avatar">
+            </div>
+
+            <div class="container">
+                <label for="uname"><b>아이디</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+
+                <label for="psw"><b>패스워드</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <button type="submit">Login</button>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> 로그인정보를 기억합니다
+                </label>
+            </div>
+
+            <div class="container" style="background-color:#f1f1f1">
+                <button type="button" class="cancelbtn">Cancel</button>
+                <span class="psw"><a href="#">비밀번호를 잊으셨습니까?</a></span>
+            </div>
+        </form>
+    </article>
+</section>
+
+<!-- <footer>
+  <p>Footer</p>
+</footer> -->
+
+</body>
+</html>

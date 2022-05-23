@@ -166,7 +166,8 @@
         <ul>
             <h1>
                 <div class="logo">
-                    <a href="/"><img src="image/academy_top_logo-removebg-preview.png" alt="NHN Academy" title="NHN Academy"
+                    <a href="/"><img src="image" alt="NHN Academy"
+                                     title="NHN Academy"
                                      style="max-width: 100%; height: auto;"></a>
                 </div>
             </h1>
@@ -177,14 +178,23 @@
     </nav>
 
     <article>
+        <form method="post" action="/boardModify/modify/{contentSerialNumber}">
+            <b>제목</b>
+            <input type="text" placeholder="title" name="title" required>
 
-        <div class="logo">
-            <a href="https://www.nhnacademy.com/"><img src="image/academy_top_logo-removebg-preview.png" alt="NHN Academy" title="NHN Academy"
-                                                       style="max-width: 100%; height: auto;"></a>
-        </div>
+            <b>내용</b>
+            <input type="text" placeholder="content" name="content" required>
+
+            <button type="submit">Modify</button>
+
+        </form>
+
     </article>
 </section>
 
+<!-- <footer>
+  <p>Footer</p>
+</footer> -->
 
 </body>
 </html>

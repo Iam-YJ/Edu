@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
     <title>HsYj DB Application PJ</title>
     <meta charset="utf-8">
@@ -55,7 +56,8 @@
             padding: 20px;
             width: 89%;
             background-color: #f1f1f1;
-            height: 300px; /* only for demonstration, should be removed */
+            height: 300px;
+            /* only for demonstration, should be removed */
         }
 
         /* Clear floats after the columns */
@@ -75,7 +77,9 @@
 
         /* 로그인 폼 css */
         @media (max-width: 600px) {
-            nav, article {
+
+            nav,
+            article {
                 width: 100%;
                 height: auto;
             }
@@ -87,7 +91,8 @@
         }
 
         /* Full-width inputs */
-        input[type=text], input[type=password] {
+        input[type=text],
+        input[type=password] {
             width: 100%;
             padding: 12px 20px;
             margin: 8px 0;
@@ -153,9 +158,13 @@
                 width: 100%;
             }
         }
-    </style>
+
+        .writer {
+            text-align: right;
+        }
     </style>
 </head>
+
 <body>
 <header>
     <h2>Board Main</h2>
@@ -166,8 +175,8 @@
         <ul>
             <h1>
                 <div class="logo">
-                    <a href="/"><img src="image/academy_top_logo-removebg-preview.png" alt="NHN Academy" title="NHN Academy"
-                                     style="max-width: 100%; height: auto;"></a>
+                    <a href="/"><img src="image/academy_top_logo-removebg-preview.png" alt="NHN Academy"
+                                     title="NHN Academy" style="max-width: 100%; height: auto;"></a>
                 </div>
             </h1>
             <li><a href="/login" style="color: white">Login</a></li>
@@ -176,15 +185,34 @@
         </ul>
     </nav>
 
-    <article>
+    <article style="background: white;">
+        <form method="post" action="/boardWrite">
+            <table>
+                <th>작성자:</th>
+                <td><input type="text" placeholder="" name="title" required></td>
+            </table>
+            <table>
+                <td><b>작성일시:</b></td>
+                <td><input type="text" placeholder="" name="title" required></td>
+            </table>
+            <label for="uname"><b>제목</b></label>
+            <input type="text" placeholder="제목을 입력하세요." name="title" required>
+            <textarea name="content" rows="20" cols="100" placeholder="내용을 입력하세요."></textarea><br />
 
-        <div class="logo">
-            <a href="https://www.nhnacademy.com/"><img src="image/academy_top_logo-removebg-preview.png" alt="NHN Academy" title="NHN Academy"
-                                                       style="max-width: 100%; height: auto;"></a>
-        </div>
+            <form action="/action_page.php">
+                <input type="file" id="myFile" name="filename">
+                <input type="submit" />
+            </form>
+
+        </form>
+
     </article>
 </section>
 
+<!-- <footer>
+<p>Footer</p>
+</footer> -->
 
 </body>
+
 </html>

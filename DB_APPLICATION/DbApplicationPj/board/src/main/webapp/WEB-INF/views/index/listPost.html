@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>목록</title>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th>게시글번호</th>
+        <th>작성자</th>
+        <th>제목</th>
+        <th>작성시간</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="post : ${posts}">
+        <td th:text="${post.boardNo}"/>
+        <td th:text="${post.memNo}"/>
+        <td th:text="${post.BoardTitle}"><a href="/contextPost"></a></td>
+<!--        <a th:href="@{|/postModify/${post.postNum|}", th:if="${isWriter || isAdmin}"-->
+        <td th:text="${post.BoardRegisterDatetime}"/>
+    </tr>
+    </tbody>
+</table>
+
+<a href="postPage">게시판메뉴페이지</a>
+</body>
+</html>
