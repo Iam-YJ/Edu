@@ -1,0 +1,12 @@
+
+s
+java:S1450"]Remove the "userRepository" field and declare it as a local variable in the relevant methods.(×Š¾
+M
+java:S1128"7Remove this unused import 'com.nhnacademy.domain.Post'.(ÉêÄ¡
+S
+java:S1128"8Remove this unused import 'com.nhnacademy.domain.Posts'.(³òäƒøÿÿÿÿ
+U
+java:S1128"?Remove this unused import 'com.nhnacademy.repo.PostRepository'.(½¼ÿ÷
+O
+java:S1128
+"4Remove this unused import 'java.time.LocalDateTime'.(æÃ§ƒüÿÿÿÿ

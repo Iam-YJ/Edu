@@ -1,0 +1,15 @@
+
+r
+java:S1450"]Remove the "postRepository" field and declare it as a local variable in the relevant methods.(âØÕM
+S
+java:S1854"8Remove this useless assignment to local variable "time".(î™¹‚ùÿÿÿÿ
+D
+java:S1481")Remove this unused "time" local variable.(î™¹‚ùÿÿÿÿ
+P	java:S125"<This block of commented-out lines of code should be removed.(¶
+
+O
+java:S1128"9Remove this unused import 'com.nhnacademy.repo.PostRepo'.(Õ”©±
+D
+java:S1128".Remove this unused import 'java.util.Objects'.(¼¸õ›
+Q
+java:S1128";Remove this unused import 'javax.servlet.http.HttpSession'.(í¨ô

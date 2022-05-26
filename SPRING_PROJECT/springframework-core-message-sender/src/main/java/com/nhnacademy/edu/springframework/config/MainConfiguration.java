@@ -17,7 +17,7 @@ import org.springframework.context.annotation.ImportResource;
 import org.springframework.core.type.AnnotatedTypeMetadata;
 
 @Configuration
-@ImportResource("classpath:/xmlconfig/beans.xml")
+//@ImportResource("classpath:/xmlconfig/beans.xml")
 @EnableAspectJAutoProxy
 public class MainConfiguration {
     @Bean
