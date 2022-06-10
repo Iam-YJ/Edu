@@ -8,35 +8,42 @@ import org.junit.jupiter.api.TestMethodOrder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 
-import javax.transaction.Transactional;
+import java.util.List;
+import java.util.Optional;
 
 import static org.hamcrest.Matchers.equalTo;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.BDDMockito.given;
+import static org.mockito.BDDMockito.willDoNothing;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.MOCK)
 @AutoConfigureMockMvc
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class) // 테스트 order를 정하는 방법이 있고
 //@Transactional // 테스트를 한 후 rollback 하는 방법도 있다
-class StudentControllerTest {
+class StudentControllerMockBeanTest {
 
     @Autowired
     private MockMvc mockMvc;
 
-
+    @MockBean
+    private StudentRepository studentRepository;
 
     @Test
     @Order(1)
     void testGetStudents() throws Exception {
+        given(studentRepository.findAll())
+                .willReturn(List.of(new Student(100L, "HS", 900)));
+
         this.mockMvc.perform(get("/students"))
                 .andExpect(status().isOk())
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
-                .andExpect(jsonPath("$[0].name", equalTo("Manty")));
+                .andExpect(jsonPath("$[0].name", equalTo("HS")));
     }
 
     @Test
@@ -54,8 +61,10 @@ class StudentControllerTest {
     void testCreateStudent() throws Exception {
         Student zbum = new Student(4L, "zbum", 200);
 
-        String requestBody = new ObjectMapper().writeValueAsString(zbum);
+        given(studentRepository.findById(4L))
+                .willReturn(Optional.empty());
 
+        String requestBody = new ObjectMapper().writeValueAsString(zbum);
         this.mockMvc.perform(post("/students")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(requestBody))
@@ -68,7 +77,9 @@ class StudentControllerTest {
     @Test
     @Order(4)
     void testDeleteStudent() throws Exception {
-        this.mockMvc.perform(delete("/students"))
+        willDoNothing().given(studentRepository).deleteById(any());
+
+        this.mockMvc.perform(delete("/students/{id}", 1L))
                 .andExpect(status().isOk());
     }
 }
